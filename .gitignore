@@ -212,7 +212,7 @@ docs/_build/
 
 # PyBuilder
 target/
-
+OutPuts/log
 # Jupyter Notebook
 .ipynb_checkpoints
 

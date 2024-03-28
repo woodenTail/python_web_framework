@@ -1,9 +1,9 @@
 import pytest
 import os
 import sys
-from selenium import webdriver
-from Common.plugs.get_log import Log
-from Common.plugs.get_config import r_config
+from selenium import webdriver as webdriver
+from Common.plugs.get_log import Log as Log
+from Common.plugs.get_config import r_config as r_config
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 if sys.platform == "win32":
@@ -18,24 +18,24 @@ driver = None
 
 @pytest.fixture(scope='session')
 def project_session_start():
-    logger.info("==========开始 XX项目 执行测试===========")
+    # logger.info("==========开始 XX项目 执行测试===========")
     global driver
     driver = webdriver.Chrome()
     driver.maximize_window()
     yield driver
     driver.quit()
-    logger.info("==========结束 XX项目 测试===========")
+    # logger.info("==========结束 XX项目 测试===========")
 
 
 @pytest.fixture(scope='module')
 def project_module_start():
-    logger.info("==========开始 XX模块 执行测试===========")
+    # logger.info("==========开始 XX模块 执行测试===========")
     global driver
     driver = webdriver.Chrome()
     driver.maximize_window()
     yield driver
     driver.quit()
-    logger.info("==========结束 XX模块 测试===========")
+    # logger.info("==========结束 XX模块 测试===========")
 
 
 @pytest.fixture()
