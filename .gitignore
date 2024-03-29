@@ -212,7 +212,10 @@ docs/_build/
 
 # PyBuilder
 target/
+.idea
 OutPuts/log
+OutPuts/image
+
 # Jupyter Notebook
 .ipynb_checkpoints
 
